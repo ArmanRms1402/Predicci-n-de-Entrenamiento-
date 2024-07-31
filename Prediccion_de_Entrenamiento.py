@@ -1,6 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
+from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
 import requests
 from io import BytesIO
@@ -13,7 +12,6 @@ import matplotlib.pyplot as plt
 # Función para calcular el tiempo de entrenamiento
 def calcular_tiempo_entrenamiento():
     try:
-        # Recopilar datos del usuario
         edad = int(entry_edad.get())
         peso = float(entry_peso.get())
         altura = float(entry_altura.get())
@@ -21,13 +19,11 @@ def calcular_tiempo_entrenamiento():
         actividad = actividad_var.get()
         tipo_ingesta = ingesta_var.get()
 
-        # Calcular TMB
         if genero == "Hombre":
             TMB = (10 * peso) + (6.25 * altura) - (5 * edad) + 5
         else:
             TMB = (10 * peso) + (6.25 * altura) - (5 * edad) - 161
 
-        # Calcular ingesta calórica
         actividad_fisica = {
             "Poco ejercicio": 1.2,
             "Ejercicio ligero (1-3 días)": 1.375,
@@ -36,41 +32,38 @@ def calcular_tiempo_entrenamiento():
         }
         IC = TMB * actividad_fisica[actividad]
 
-        # Calcular déficit o superávit calórico
         if tipo_ingesta == "Déficit calórico":
             deficit_calorico_final = IC - 800
         else:
             deficit_calorico_final = IC + 500
 
-        # Asegurarnos de que la entrada esté en el formato correcto
         deficit_calorico_final_normalizado = np.array([deficit_calorico_final / 1000.0])
 
-        # Predecir el tiempo de entrenamiento
         prediccion = model.predict(deficit_calorico_final_normalizado)
         tiempo_entrenamiento = prediccion[0][0]
 
-        # Mostrar el resultado en la etiqueta de resultado
         resultado_label.config(text=f"El tiempo recomendado de entrenamiento es: {tiempo_entrenamiento:.2f} minutos")
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
 # Función para visualizar la predicción
 def plot_prediction():
-    # Datos para la gráfica
-    deficits = np.linspace(500, 1000, 100)
-    deficits_normalizados = deficits / 1000.0
-    tiempos_predichos = model.predict(deficits_normalizados)
+    try:
+        deficits = np.linspace(500, 1000, 100)
+        deficits_normalizados = deficits / 1000.0
+        tiempos_predichos = model.predict(deficits_normalizados)
 
-    # Crear la gráfica
-    plt.figure(figsize=(10, 6))
-    plt.plot(deficit_calorico, tiempo_entrenamiento, 'bo', label='Datos reales')
-    plt.plot(deficits, tiempos_predichos, 'r-', label='Predicciones del modelo')
-    plt.xlabel('Déficit calórico (calorías)')
-    plt.ylabel('Tiempo de entrenamiento (minutos)')
-    plt.title('Predicción del tiempo de entrenamiento basado en el déficit calórico')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+        plt.figure(figsize=(10, 6))
+        plt.plot(deficit_calorico, tiempo_entrenamiento, 'bo', label='Datos reales')
+        plt.plot(deficits, tiempos_predichos, 'r-', label='Predicciones del modelo')
+        plt.xlabel('Déficit calórico (calorías)')
+        plt.ylabel('Tiempo de entrenamiento (minutos)')
+        plt.title('Predicción del tiempo de entrenamiento basado en el déficit calórico')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+    except Exception as e:
+        messagebox.showerror("Error", str(e))
 
 # Función para reiniciar los campos
 def reiniciar_campos():
