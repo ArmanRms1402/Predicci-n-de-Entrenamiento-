@@ -281,19 +281,24 @@ ingesta_combobox.grid(row=6, column=1, pady=5)
 ```
 ### Capturas del funcionamiento del código
 - **En esta parte el código esta entrenando**
+  
   ![image](https://github.com/user-attachments/assets/fe848b9f-165d-49e9-bba7-8470d2d42f8a)
 
 
 - **Interfas de la IA**
+  
   ![image](https://github.com/user-attachments/assets/caac3356-e852-45d4-ac8e-d8aee5fc87e1)
 
-
 - **Se llenan los datos y arroja la prediccion**
+  
   ![image](https://github.com/user-attachments/assets/34e73401-52bd-488e-a1af-2be42651fcf7)
 
-
 - **Muestra el gráfico**
+  
   ![image](https://github.com/user-attachments/assets/017a183f-03dc-4970-bbae-e4eb2a48d315)
+
+  ![image](https://github.com/user-attachments/assets/1814f7cd-b3f2-4c39-8de3-0ba7493b40c5)
+
 
 
 ### Conclusión
