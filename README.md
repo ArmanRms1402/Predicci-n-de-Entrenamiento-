@@ -1,5 +1,5 @@
 # CBUM TRAINING TIME PREDICTION
-### Una IA que recomienda cuanto tiempo entrenar sugun tu injesta calorica 🔥 
+### Una IA que recomienda cuanto tiempo entrenar según tu injesta calorica 🔥 
 
 >En el mundo del fitness y la nutrición, encontrar el equilibrio perfecto entre la ingesta calórica y el tiempo de entrenamiento es crucial para alcanzar los objetivos personales,
 >ya sea perder peso, ganar masa muscular o simplemente mantener un estilo de vida saludable. La relación entre las calorías consumidas y el tiempo dedicado al ejercicio puede ser
