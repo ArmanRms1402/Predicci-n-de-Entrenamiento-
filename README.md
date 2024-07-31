@@ -9,6 +9,11 @@
 >esta aplicación predice el tiempo de entrenamiento óptimo basado en la ingesta calórica diaria del usuario. Con una interfaz gráfica de usuario (GUI) intuitiva y fácil de usar, CBUM Training
 >Time Prediction ofrece recomendaciones personalizadas, ayudando a los usuarios a maximizar la eficacia de sus rutinas de ejercicio y alcanzar sus metas de manera más eficiente.
 
+### Informacion basica para comprender más el proyecto
+TMB significa Tasa Metabólica Basal (en inglés, Basal Metabolic Rate o BMR). Es la cantidad de energía que el cuerpo necesita para mantener las funciones vitales básicas, como la respiración, la circulación sanguínea y la regulación de la temperatura corporal, en estado de reposo. La TMB varía según la edad, el sexo, el peso y la altura de una persona.
+
+La ecuación de Harris-Benedict es una fórmula utilizada para estimar la Tasa Metabólica Basal (TMB), la cual es la cantidad de calorías que una persona necesita diariamente para mantener sus funciones corporales en reposo. Esta ecuación se desarrolló a principios del siglo XX por los científicos James Arthur Harris y Francis Gano Benedict.
+
 ### Tecnologías Usadas 
 
 En Este proyecto se utilizan varias tecnologías y bibliotecas para crear una aplicación gráfica, manipular imágenes, manejar datos y entrenar un modelo de aprendizaje automático. Aquí se detallan 
