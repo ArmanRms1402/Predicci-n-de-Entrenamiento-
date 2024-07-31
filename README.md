@@ -279,6 +279,19 @@ ingesta_combobox['values'] = ("Déficit calórico", "Superávit calórico")
 ingesta_combobox.grid(row=6, column=1, pady=5)
 
 ```
+### Capturas del funcionamiento del código
+- **En esta parte el código esta entrenando**
+  ![image](https://github.com/user-attachments/assets/fe848b9f-165d-49e9-bba7-8470d2d42f8a)
+
+- **Interfas de la IA**
+  ![image](https://github.com/user-attachments/assets/caac3356-e852-45d4-ac8e-d8aee5fc87e1)
+
+- **Se llenan los datos y arroja la prediccion**
+  ![image](https://github.com/user-attachments/assets/34e73401-52bd-488e-a1af-2be42651fcf7)
+
+- **Muestra el gráfico**
+  ![image](https://github.com/user-attachments/assets/017a183f-03dc-4970-bbae-e4eb2a48d315)
+
 
 ### Conclusión
 CBUM Training Time Prediction es una herramienta avanzada de inteligencia artificial diseñada para recomendar el tiempo de entrenamiento óptimo basado en la ingesta calórica diaria del usuario. Utilizando algoritmos de aprendizaje automático y una interfaz gráfica intuitiva, esta aplicación ofrece recomendaciones personalizadas que ayudan a los usuarios a alcanzar sus metas de fitness de manera más eficiente. Al integrar tecnologías como Tkinter, Pillow, Requests, NumPy, Pandas, TensorFlow y Matplotlib, la herramienta asegura un rendimiento robusto y una experiencia de usuario enriquecida. La facilidad de configuración y uso del sistema, junto con la capacidad de visualizar y ajustar las predicciones de entrenamiento, hacen de CBUM Training Time Prediction una valiosa adición al conjunto de herramientas de cualquier entusiasta del fitness.
