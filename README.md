@@ -299,6 +299,8 @@ ingesta_combobox.grid(row=6, column=1, pady=5)
 
   ![image](https://github.com/user-attachments/assets/1814f7cd-b3f2-4c39-8de3-0ba7493b40c5)
 
+### Video Exlicando el codigo y ejecutandolo
+
 
 
 ### Conclusión
