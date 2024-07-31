@@ -23,6 +23,8 @@ def calcular_tiempo_entrenamiento():
             TMB = (10 * peso) + (6.25 * altura) - (5 * edad) + 5
         else:
             TMB = (10 * peso) + (6.25 * altura) - (5 * edad) - 161
+        
+        print ("Calorias de mantenimiento: " + str(TMB))
 
         actividad_fisica = {
             "Poco ejercicio": 1.2,
@@ -31,11 +33,15 @@ def calcular_tiempo_entrenamiento():
             "Ejercicio intenso (6-7 días)": 1.725
         }
         IC = TMB * actividad_fisica[actividad]
+        
+        print ("Injesta calorica: " +  str(IC))
 
         if tipo_ingesta == "Déficit calórico":
             deficit_calorico_final = IC - 800
         else:
             deficit_calorico_final = IC + 500
+        
+        print ("Deficit: " + str(deficit_calorico_final))
 
         deficit_calorico_final_normalizado = np.array([deficit_calorico_final / 1000.0])
 
@@ -45,6 +51,7 @@ def calcular_tiempo_entrenamiento():
         resultado_label.config(text=f"El tiempo recomendado de entrenamiento es: {tiempo_entrenamiento:.2f} minutos")
     except Exception as e:
         messagebox.showerror("Error", str(e))
+
 
 # Función para visualizar la predicción
 def plot_prediction():
